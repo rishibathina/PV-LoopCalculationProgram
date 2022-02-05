@@ -7,3 +7,8 @@ ypoints = np.array([0,250])
 
 plt.plot(xpoints, ypoints)
 plt.show()
+
+# pressure
+# flow/volume
+
+# convert volume to time and flow to pressure
