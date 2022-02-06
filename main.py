@@ -25,10 +25,12 @@ def residualVolume(volume, flow):
         if x != 0 and y == 0 :
             return x
 
-    return "no data found";
+    return "no data found"
 
 def totalLungCapacity(volume):
     pass
+
+# pressure volume code
 
 # Testing
 
@@ -37,3 +39,6 @@ flow = np.array([0,1,3,5,6,0])
 
 cock = residualVolume(volume, flow)
 print(cock)
+
+#given volume(t), pressure(t), and flow(t)
+# need to create flow(volume)
