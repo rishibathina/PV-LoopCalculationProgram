@@ -17,6 +17,11 @@ def loadJson(jsonFile):
 
     obj = json.loads(data)
 
+def createDic(volume, time, volTime):
+    if volume.length == time.length :
+        for x in range(0, volume.length - 1):
+            volTime[x] = volume[x], time[x]
+
 # Residual volume is for Flow V Volume
 # pre: a NumPy array (x axis) of Volume(t)
 #      a NumPy array (y-axis) of Flow
@@ -27,7 +32,7 @@ def residualVolume(volume, flow):
 
     return "no data found"
 
-def totalLungCapacity(volume):
+def totalLungCapacity(volume, time):
     pass
 
 # pressure volume code
@@ -36,6 +41,10 @@ def totalLungCapacity(volume):
 
 volume = np.array([0,1,2,3,4,5])
 flow = np.array([0,1,3,5,6,0])
+time = np.array([1,2,3,4,5,6])
+volTime = {}
+
+
 
 cock = residualVolume(volume, flow)
 print(cock)
